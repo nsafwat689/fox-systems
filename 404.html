@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is already in place
+      var path = window.location.pathname;
+      var repo = path.substring(0, path.indexOf('/fox-systems/') + 12);
+      var segment = path.substring(path.indexOf('/fox-systems/') + 12);
+      
+      // If the path is not the root of the repo, redirect to the root
+      if (segment !== '') {
+        window.location.replace(repo);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- If you want to show a loading indicator or message before the redirect -->
+    <p>Redirecting to the home page...</p>
+  </body>
+</html>
