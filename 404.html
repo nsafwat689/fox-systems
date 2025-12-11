@@ -3,10 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=/fox-systems/">
   <script>
-    // Fallback if meta refresh doesn't work
-    window.location.href = "/fox-systems/";
+    // Get the current path
+    var path = window.location.pathname;
+    
+    // Remove the /fox-systems/ prefix
+    var cleanPath = path.replace(/^\/fox-systems/, '');
+    
+    // If it's not the root path, redirect to index.html with hash
+    if (cleanPath !== '/' && cleanPath !== '/index.html') {
+      window.location.href = '/fox-systems/';
+    }
   </script>
 </head>
 <body>
